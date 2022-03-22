@@ -25,9 +25,12 @@ PICS = 'https://telegra.ph/file/c774cca7f44d3464ae76b.jpg https://telegra.ph/fil
 # Admins, Channels & Users
 ADMINS = [658905997]
 CHANNELS = [-1001484884182, -1001172622040, -1001280478789]
-AUTH_USERS = []
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+auth_channel = environ.get('AUTH_CHANNEL')
+auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = -1001157840306
-AUTH_GROUPS = [] 
+AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None 
 
 # MongoDB information
 DATABASE_URI = "mongodb+srv://Telegram:Telegram@cluster0.ahnw6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
