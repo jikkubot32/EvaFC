@@ -42,24 +42,8 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'FilmClubChannel')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("<code>{file_name}</code>
-
-<b>Size: <code>{file_size}</code></b>
-
-<b>© Powered by [FilmClubChannel](https://t.me/FilmClubChannel) </b>", None)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🏷 Title</b>: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
-☀️ Languages : <code>{languages}</code>
-👥 Cast : <code>{cast}</code>
-📀 RunTime: {runtime} Minutes
-📆 Release Info : {release_date}
-🎛 Countries : <code>{countries}</code>
-👥 Requested By :  {message.from_user.mention}
-🌐 Channel : @FilmClubChannel
-
-© {message.chat.title} </b>")
+CUSTOM_FILE_CAPTION = environ.get("<code>{file_name}</code>\n\n<b>Size: <code>{file_size}</code></b>\n\n<b>© Powered by [FilmClubChannel](https://t.me/FilmClubChannel) </b>", None)
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>🏷 Title</b>: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)\n☀️ Languages : <code>{languages}</code>\n👥 Cast : <code>{cast}</code>\n📀 RunTime: {runtime} Minutes\n📆 Release Info : {release_date}\n🎛 Countries : <code>{countries}</code>\n👥 Requested By :  {message.from_user.mention}\n🌐 Channel : @FilmClubChannel\n\n© {message.chat.title} </b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("4", None)
