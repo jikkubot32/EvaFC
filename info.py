@@ -1,5 +1,6 @@
 # Bot information
 SESSION = 'Media_search'
+USER_SESSION = 'User_Bot'
 API_ID = 3937220
 API_HASH = 'a4de4c3e683bfdf30b5781142e0d41f2'
 BOT_TOKEN = '5096921899:AAHN8eExI_fhmzWY7cD-7tM_kX58u8QoP8o'
